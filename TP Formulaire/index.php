@@ -83,7 +83,7 @@ if (isset($_POST['phoneNumber'])) {
 
 if (isset($_POST['submitBtn'])) {
   if (!array_key_exists('graduation', $_POST)) {
-    $error['graduation'] = 'Veuillez renseigner le champ';
+    $error['graduation'] = 'Veuillez choisir une option';
   };
 }
 
@@ -254,7 +254,7 @@ if (isset($_POST['submitBtn'])) {
                     <option value="bac+3" <?= isset($_POST['graduation']) && ($_POST['graduation']) == 'bac+3'  ? 'selected' : '' ?>>Bac+3</option>
                     <option value="Supérieur" <?= isset($_POST['graduation']) && ($_POST['graduation']) == 'Supérieur'  ? 'selected' : '' ?>>Supérieur</option>
                   </select>
-                  <span class="font-italic text-danger"><?= isset($error['graduation']) ? $error['graduation'] : '' ?></span>
+                  <div class="text-danger"><?= isset($error['graduation']) ? $error['graduation'] : '' ?></div>
                 </div>
 
                 <div class="row mt-3">
