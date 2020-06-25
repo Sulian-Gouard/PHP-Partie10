@@ -32,9 +32,6 @@ if (isset($_POST['age'])) {
   if ($userAge <= 0 ||  $userAge >= 130) {
     $error['age'] = 'Vous semblez avoir un âge incorrect';
   }
-  if (preg_match("/^[0-9]{0,2}$/u", $_POST['age']) == false) {
-    $error['age'] = 'Vous semblez avoir un âge incorrect';
-  }
   if (empty($_POST['age'])) {
     $error['age'] = 'Veuillez renseigner le champ';
   };
@@ -79,7 +76,7 @@ if (isset($_POST['company'])) {
           <p>Société : <?= htmlspecialchars($_POST['company']) ?></p>
         <?php } ?>
 
-        <form method="post" action="" novalidate>
+        <form method="post" action="">
 
 
           <div class="row mt-3">

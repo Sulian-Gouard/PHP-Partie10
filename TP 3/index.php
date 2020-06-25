@@ -40,20 +40,19 @@ $portraitsArray = array(
 
 <body>
 
-  <div class="container p-4 col-sm-8 bg-light">
+  <div class="container p-4 col-sm-6 bg-light">
     <div class="col-sm-12">
-      <div class="row-sm-justify-content-center">
-        
-     <?php foreach ($portraitsArray as $key => $value) { ?> 
-      <p style="font-weight: bold;"><?= $value['name'] . ' '. $value['firstname'] ?></p>
-        <p><img src="<?= $value['portrait'] ?>" alt="" width="320" height="400"></p>
+      <div class="row-md-justify-content-center">
 
-<?php } ?>
+        <?php foreach ($portraitsArray as $value) { ?>
+          <p style="font-weight: bold;"><?= $value['name'] . ' ' . $value['firstname'] ?></p>
+          <p><img src="<?= $value['portrait'] ?>" alt="" width="100%"></p>
+
+        <?php } ?>
 
       </div>
     </div>
   </div>
-
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
